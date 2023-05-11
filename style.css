@@ -1,0 +1,124 @@
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+    margin: 40px 0;
+    background-color: white;
+}
+.box .image img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.summary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.summary .order, .summary .para-1 {
+    text-align: center;
+}
+.summary .order{
+    margin: 20px 30px;
+    color: var(--Dark-blue);
+}
+.summary .para-1 {
+    padding: 0 27px 25px 27px;
+    color: var(--Desaturated-blue);
+}
+.annual {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--Very-pale-blue);
+    margin: 0 20px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 85%;
+}
+.annual-plan {
+    display: flex;
+}
+.annual-dollar {
+    font-size: 13px;
+    padding: 5px 0 5px 20px;
+}
+.annual-dollar p{
+    color: var(--Desaturated-blue);
+    font-size: 15px;
+}
+.button {
+    width: 85%;
+    height: 45px;
+    border-radius: 10px;
+    background-color: var(--Bright-blue);
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    margin-top: 20px;
+    box-shadow: hsla(245, 75%, 52%, 0.5) 0px 7px 29px 0px;
+}
+.button:hover {
+    background-color: hsla(245, 75%, 52%, 0.8);
+}
+.cancel {
+    margin: 30px;
+}
+.cancel a{
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+    font-weight: 700;
+    font-size: 13px;
+    margin: 30px;
+}
+.cancel a:hover, .button, .annual a {
+    cursor: pointer;
+}
+.cancel a:hover {
+    color: black;
+}
+.annual a:hover{
+    text-decoration: none;
+}
+
+
+@media screen and (min-width:576px) {
+    .container {
+        background-image: url(images/pattern-background-desktop.svg);
+        background-color: #e1e9ff;
+    }
+    .box{
+        width: 400px;
+    }
+}
